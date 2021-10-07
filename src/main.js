@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router/index'
-import Vuesax from 'vuesax';
 import 'vuesax/dist/vuesax.css'; //Vuesax styles
+
+import App from './App.vue'
+import Vue from 'vue'
+import Vuesax from 'vuesax';
+import router from './router/index'
 
 Vue.config.productionTip = false
 Vue.use(Vuesax)
