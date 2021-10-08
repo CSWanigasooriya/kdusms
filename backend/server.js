@@ -2,10 +2,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+
 const app = express();
+require("./routes/user.routes")(app);
+
 
 var corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "http://localhost:8080"
 };
 
 app.use(cors(corsOptions));
@@ -18,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to bezkoder application." });
+    res.json({ message: "Welcome to KDU Student." });
 });
 
 const db = require("./models");

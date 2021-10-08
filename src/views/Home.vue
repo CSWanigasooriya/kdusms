@@ -5,7 +5,7 @@
         <div class="card">
           <div class="card-content">
             <span class="card-title">Time Table</span>
-            <vs-table striped>
+            <!-- <vs-table striped>
               <template #thead>
                 <vs-tr>
                   <vs-th> Monday </vs-th>
@@ -28,7 +28,7 @@
                   </vs-td>
                 </vs-tr>
               </template>
-            </vs-table>
+            </vs-table> -->
           </div>
         </div>
       </div>

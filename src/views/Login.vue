@@ -14,9 +14,9 @@
                 <div class="row">
                   <div class="col s12">
                     <vs-input
-                      v-model="value1"
-                      label="Registration Number"
-                      placeholder="e.g.: D/BSE/19/0001"
+                      v-model="email"
+                      label="KDU Email"
+                      placeholder="e.g.: johndoe@kdu.ac.lk"
                     >
                     </vs-input>
                   </div>
@@ -27,7 +27,7 @@
                       type="password"
                       label="Password"
                       icon-after
-                      v-model="value2"
+                      v-model="password"
                       placeholder="Type your password here"
                     >
                     </vs-input>
@@ -36,7 +36,7 @@
               </form>
             </div>
             <div class="card-action center">
-              <button class="btn">Log in</button>
+              <button class="btn" @click="test">Log in</button>
             </div>
           </div>
         </div>
@@ -49,8 +49,24 @@
 </template>
 
 <script>
+import DataService from "../services/DataService";
+
 export default {
   name: "Login",
+  data() {
+    return {
+      email: "",
+      password: "",
+      submitted: false,
+    };
+  },
+  methods: {
+    test() {
+      DataService.getAll().then((response) => {
+        console.log(response.data);
+      });
+    },
+  },
 };
 </script>
 

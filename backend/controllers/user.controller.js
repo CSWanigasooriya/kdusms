@@ -9,7 +9,16 @@ exports.create = (req, res) => {
 
 // Retrieve all Users from the database.
 exports.findAll = (req, res) => {
-
+    User.findAll()
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving users."
+            });
+        });
 };
 
 // Find a single User with an id
@@ -32,7 +41,7 @@ exports.deleteAll = (req, res) => {
 
 };
 
-// Find all published Users
-exports.findAllPublished = (req, res) => {
+// Find all Registered Users
+exports.findAllRegistered = (req, res) => {
 
 };
