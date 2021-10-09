@@ -1,9 +1,9 @@
 module.exports = (sequelize, Sequelize) => {
     const User = sequelize.define("user", {
-        id: {
-            primaryKey: true,
-            type: Sequelize.STRING
-        },
+        // id: {
+        //     primaryKey: true,
+        //     type: Sequelize.INT
+        // },
         email: {
             type: Sequelize.STRING
         },
@@ -13,12 +13,12 @@ module.exports = (sequelize, Sequelize) => {
         role: {
             type: Sequelize.STRING
         },
-        createdAt: {
-            type: Sequelize.STRING
-        },
-        updatedAt: {
-            type: Sequelize.STRING
-        }
+        // createdAt: {
+        //     type: Sequelize.STRING
+        // },
+        // updatedAt: {
+        //     type: Sequelize.STRING
+        // }
     });
 
     return User;
