@@ -50,6 +50,8 @@
 
 <script>
 import DataService from "../services/DataService";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+const auth = getAuth();
 
 export default {
   name: "Login",
